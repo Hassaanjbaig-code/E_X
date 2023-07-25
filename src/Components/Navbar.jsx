@@ -8,9 +8,9 @@ const Navbar = () => {
     ]
   return (
     <nav className='w-full'>
-      <ul className='flex flex-1 flex-row-reverse'>
+      <ul className='Navbar'>
         {navlink.map((str) => (
-            <li className='mr-5'>{str}</li>
+            <li className='mr-5 hover:text-blue-200 cursor-pointer'>{str}</li>
         ))}
       </ul>
     </nav>

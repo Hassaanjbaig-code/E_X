@@ -1,12 +1,12 @@
-import "./App.css";
 import Navbar from "./Components/Navbar";
+import PromoScreen from "./Components/Promo_Screen";
 
 function App() {
   return (
     <>
-     <Navbar />
-      <div className="text-3xl font-bold underline bg-black h-screen w-full text-white">
-        Hello World
+      <Navbar />
+      <div className='main'>     {/* For the contant to be center */}
+        <PromoScreen />
       </div>
     </>
   );

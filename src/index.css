@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body {
+  @apply container bg-black text-white
+}
+
+.Navbar {
+  @apply flex flex-1 flex-row-reverse h-16 items-center
+}
+
+.main {
+  @apply flex justify-center flex-col items-center gap-4 w-full mt-7
+}
+
+.Hero {
+  @apply w-3/4 bg-cyan-200 h-52 border border-r-[1px] 
+}
+
