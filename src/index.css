@@ -4,7 +4,7 @@
 
 
 body {
-  @apply container bg-black text-white
+  @apply max-md:container bg-black text-white
 }
 
 .Navbar {
@@ -19,3 +19,14 @@ body {
   @apply w-3/4 bg-cyan-200 h-52 border border-r-[1px] 
 }
 
+.Card_main {
+  @apply w-80 bg-white shadow rounded h-[35rem]
+}
+
+.main_Product {
+  @apply flex flex-wrap justify-center items-center gap-x-5 gap-y-3
+}
+
+.Card_main img {
+  @apply h-[54%]
+}
