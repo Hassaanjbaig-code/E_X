@@ -1,16 +1,19 @@
 import Navbar from "./Components/Navbar";
-import PromoScreen from "./Components/Promo_Screen";
-import Products from "./Components/Products";
+import Main from "./Components/Main";
+import LogIn from "./Components/LogIn";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <>
       <Navbar />
-      <div className="main">
-        {/* For the contant to be center */}
-        <PromoScreen />
-          <Products />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Main />} />
+          <Route path='/login' element={<LogIn />} />
+        </Routes>
+
+      </BrowserRouter>
     </>
   );
 }

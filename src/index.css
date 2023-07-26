@@ -30,3 +30,9 @@ body {
 .Card_main img {
   @apply h-[54%]
 }
+
+/* Add your CSS styles here */
+.focused {
+  border-color: blue;
+}
+
