@@ -31,6 +31,11 @@ body {
   @apply h-[54%]
 }
 
+
+.dropdown {
+  @apply z-50 bg-white text-black rounded-md absolute p-1 flex flex-col items-start md:bottom-[-74px] max-md:bottom-[-23.5312rem] max-md:w-[87%] 
+}
+
 /* Add your CSS styles here */
 .focused {
   border-color: blue;

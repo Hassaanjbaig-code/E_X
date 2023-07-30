@@ -53,6 +53,7 @@ const Products = () => {
 
     return (
         <>
+                <div className='max-md:w-[95%] md:w-[60%]'>
             <div className='w-full flex justify-center items-center h-[4rem]'>
                 <input type="text"
                     name="Search"
@@ -60,7 +61,7 @@ const Products = () => {
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                     placeholder='Search a Product by Typing'
-                    className='w-3/6 text-black h-8 rounded-2xl p-5' />
+                    className=' text-black w-full h-8 rounded-2xl p-5' />
                 <button type='submit' onClick={() => setValue('')} className='text-3xl' ><MdOutlineCleaningServices /></button>
             </div>
             {filteredTitles.length > 0 && (
@@ -72,6 +73,7 @@ const Products = () => {
                     ))}
                 </div>
             )}
+            </div>
             <ul className='main_Product'>
                 {filtered.map((product) => (
                     <li key={product.id} className='Card_main'>

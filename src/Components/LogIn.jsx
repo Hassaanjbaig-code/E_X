@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import { MdVisibility, MdVisibilityOff } from 'react-icons/md'
 
 const LogIn = () => {
-    const [ focus, setFocus ] = useState(false);
+    const [focus, setFocus] = useState(false);
+    const [visiblity, setVisibility] = useState(false);
+
+    const handleVisibilty = () => setVisibility(!visiblity);
     return (
         <section className="h-[calc(100vh - 4rem)]">
             <div className="container h-full px-6 py-24">
@@ -13,21 +17,27 @@ const LogIn = () => {
                             alt="" />
                     </div>
                     <div className="md:w-8/12 lg:ml-6 lg:w-5/12">
-                        <form className='flex flex-col gap-5 w-3/5'>
-                            <input 
-                            type="email"
-                            onFocus ={() => setFocus(true)} 
-                            onBlur={() => setFocus(false)} 
-                            name="Email" 
-                            id="Email"
-                            className={`bg-transparent p-2 text-xl border ${focus === true ? 'border-blue-600' : 'border-white'}`} 
-                            placeholder='Enter Email' />
-                            <input 
-                            type="password" 
-                            name="password" 
-                            id="Password"
-                            className='bg-transparent p-2 text-xl border border-white focus:border-blue-600' 
-                            placeholder='Enter Password' />
+                        <form className='flex flex-col gap-5 w-[20rem]'>
+                            < input
+                                type="email"
+                                onFocus={() => {
+                                    setFocus(true)
+                                    console.log(focus)
+                                }}
+                                onBlur={() => setFocus(false)}
+                                name="Email"
+                                id="Email"
+                                className={`bg-transparent p-2 text-xl border ${focus === true ? 'border-blue-600' : 'border-blue-200'}`}
+                                placeholder='Enter Email' />
+                            <div className={`flex border ${focus === true ? 'border-blue-600' : 'border-blue-200'} `}>
+                                <input
+                                    type={visiblity ? 'text' : 'password'}
+                                    name="password"
+                                    id="Password"
+                                    className={`bg-transparent p-2 text-xl border-none `}
+                                    placeholder='Enter Password' />
+                                <button type='button' onClick={handleVisibilty}>{visiblity ? <MdVisibility /> : <MdVisibilityOff />}</button>
+                            </div>
                             <button type="button" className='bg-blue-600 text-white p-2'>Log In</button>
                         </form>
 
